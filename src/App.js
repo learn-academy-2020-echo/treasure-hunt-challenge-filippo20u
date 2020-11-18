@@ -11,10 +11,11 @@ class App extends Component{
   }
 
     handleGamePlay = (index) => {
-      alert (index)
+      // below destructring the value from the state object
+      const {squares} = this.state
+      this.state.squares[index] = "🎄"
+      this.setState({ squares: squares})
     }
-
-
 
   render(){
     return(
